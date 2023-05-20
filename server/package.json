@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server spacetime",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsx watch src/server.ts"
+  },
+  "author": "Wanderson A. Timoteo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "fastify": "^4.17.0"
+  }
+}
