@@ -1,4 +1,7 @@
 import { User } from 'lucide-react'
+import Image from 'next/image'
+import nlwLogo from '../src/assets/nlw-spacetime-logo.svg'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -18,10 +21,42 @@ export default function Home() {
             memórias!
           </p>
         </a>
+
+        <div className="space-y-5">
+          <Image src={nlwLogo} alt="NLW Spacetime" />
+
+          <div className="max-w-[420px] space-y-1">
+            <h1 className="text-5xl font-bold leading-tight text-gray-50">
+              Sua cápsula do tempo
+            </h1>
+            <p className="text-lg leading-relaxed">
+              Colecione momentos marcantes da sua jornada e compartilhe (se
+              quiser) com o mundo!
+            </p>
+          </div>
+
+          <Link
+            className="text-black inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none hover:bg-green-600"
+            href="/memories/new"
+          >
+            CADASTRAR LEMBRANÇA
+          </Link>
+        </div>
+
+        <div className="text-sm leading-relaxed text-gray-200">
+          Feito com 💜 por{' '}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-gray-100"
+            href="https://www.wandersontimoteo.ga"
+          >
+            Wanderson A. Timóteo
+          </a>
+        </div>
       </div>
 
-      {/* bg-[url(..src/assets/bg-stars.svg)] bg-cover */}
-      <div className="flex flex-col p-16">
+      <div className="flex flex-col bg-[url(./../src/assets/bg-stars.svg)] bg-cover p-16">
         <div className="flex flex-1 items-center justify-center">
           <p className="w-[360px] text-center leading-relaxed">
             Você ainda não registrou nenhuma lembrança, comece a {''}
