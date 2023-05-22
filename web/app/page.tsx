@@ -6,11 +6,11 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className="grid min-h-screen grid-cols-2">
-      <div className="border-white/10 relative flex flex-col items-start justify-between overflow-hidden border-r px-28 py-16">
+      <div className="border-white/10 relative flex flex-col items-start justify-between overflow-hidden border-r bg-[url(./../src/assets/bg-stars.svg)] bg-cover px-28 py-16">
         <div className="blur-full absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50" />
         <div className="bg-stripes absolute bottom-0 right-2 top-0 w-2" />
         <a
-          href=""
+          href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}`}
           className="flex items-center gap-3 text-left transition-colors hover:text-gray-50"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400">
@@ -37,7 +37,7 @@ export default function Home() {
 
           <Link
             className="text-black inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none hover:bg-green-600"
-            href="/memories/new"
+            href=""
           >
             CADASTRAR LEMBRANÇA
           </Link>
