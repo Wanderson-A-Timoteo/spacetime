@@ -7,7 +7,7 @@ interface User {
   avatarUrl: string
 }
 
-export default function getUser(): User {
+export function getUser(): User {
   const token = cookies().get('token')?.value
 
   if (!token) {

@@ -1,4 +1,4 @@
-import EmptyMemories from '@/src/components/EmpytMemories'
+import { EmptyMemories } from '@/components/EmptyMemories'
 
 export default function Home() {
   return <EmptyMemories />
